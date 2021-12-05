@@ -27,4 +27,11 @@ public class Plateau {
         
         return true;
     }
+
+    public void setPosition(Sonda s, int x, int y) {
+        String previous = Integer.toString(s.getRow()) + ',' + Integer.toString(s.getCol());
+        String newPos = Integer.toString(x) + ',' + Integer.toString(y);
+        plateau.remove(previous);
+        plateau.add(newPos);
+    }
 }
