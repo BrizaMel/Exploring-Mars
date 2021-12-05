@@ -32,4 +32,22 @@ public class Sonda {
     public void setDirection(char d) {
         this.dir = d;
     }
+
+    public char newDirection(char d) {
+        char c = this.dir;
+        if (d == 'R') {
+            if (this.dir == 'N') c = 'W';
+            if (this.dir == 'W') c = 'S';
+            if (this.dir == 'S') c = 'E';
+            if (this.dir == 'E') c = 'N';
+        }
+        else {
+            if (this.dir == 'N') c = 'E';
+            if (this.dir == 'W') c = 'N';
+            if (this.dir == 'S') c = 'W';
+            if (this.dir == 'E') c = 'S';
+        }
+        
+        return c;
+    }
 }
