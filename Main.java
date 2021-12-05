@@ -14,9 +14,9 @@ public class Main {
 
                 if (!p.positionAllowed(newRow, newCol)) return false;
             
+                p.setPosition(s, newRow, newCol);
                 s.setRow(newRow);
                 s.setCol(newCol);
-                p.setPosition(s, newRow, newCol);
             }
 
             else {
