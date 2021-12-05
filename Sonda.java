@@ -50,4 +50,14 @@ public class Sonda {
         
         return c;
     }
+
+    public int[] nextPosition() {
+        int x = this.row;
+        int y = this.col;
+        if (dir == 'N') y = y + 1;
+        if (dir == 'W') x = x + 1;
+        if (dir == 'S') y = y - 1;
+        if (dir == 'E') x = x + 1;
+        return new int[]{x, y};
+    }
 }
