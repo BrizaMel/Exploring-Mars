@@ -35,7 +35,7 @@ public class Sonda {
 
     public char newDirection(char d) {
         char c = this.dir;
-        if (d == 'R') {
+        if (d == 'L') {
             if (this.dir == 'N') c = 'W';
             if (this.dir == 'W') c = 'S';
             if (this.dir == 'S') c = 'E';
