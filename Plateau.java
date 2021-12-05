@@ -13,7 +13,7 @@ public class Plateau {
     public Boolean positionAllowed(int x, int y) {
         Boolean rowInBounds = x >= 0 && x <= this.row;
         Boolean colInBounds = y >= 0 && y <= this.col;
-        if (rowInBounds || colInBounds) {
+        if (!rowInBounds || !colInBounds) {
             System.out.println("Position (" + x + "," + y + ") is out of bounds");
             return false;
         }
